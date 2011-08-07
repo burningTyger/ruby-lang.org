@@ -20,7 +20,7 @@
     {% endif %}
 
     <li class="{% if forloop.first %}first{% endif %} {{ current }} {% if forloop.last %}last{% endif %}">
-      <a class="{{ current }}" href="{{ url }}">{{ link.text }}</a>
+      <a class="{{ current }}" href="/{{ url }}">{{ link.text }}</a>
       {% if link.subtext %}<span>{{ link.subtext }}</span>{% endif %}
     </li>
   {% endfor %}
