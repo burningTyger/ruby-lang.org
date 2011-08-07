@@ -11,9 +11,27 @@ This is the "official" port, created by current contributors to ruby-lang.org (t
 ## Running the application localy
 
 ``` bash
-    git clone git@github.com:chikamichi/ruby-lang.org.git
+    git clone git@github.com:rubylang/ruby-lang.org.git
     cd ruby-lang.org
-    bundle
+```
+
+Required dependencies:
+
+* thor
+* rack
+* jekyll
+* rdiscount
+* RedCloth
+* haml
+* compass
+* rubypants
+* pygments.rb
+
+There is a `.rvmrc`, but feel free to discard it.
+
+Once everything is installed (`gem install …`):
+
+``` bash
     thor admin:preview
     firefox http://localhost:4000
 ```
