@@ -17,13 +17,13 @@
   
 
   <link rel="canonical" href="http://www.ruby-lang.org/fr/about/index.html"/>
-  <link href="//favicon.png" rel="shortcut icon" />
-  <link href="//stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="//javascripts/modernizr-2.0.js"></script>
+  <link href="/favicon.png" rel="shortcut icon" />
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="http://s3.amazonaws.com/ender-js/jeesh.min.js"></script>
-  <script src="//javascripts/octopress.js" type="text/javascript"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
   
-  <link href="//atom.xml" rel="alternate" title="Ruby" type="application/atom+xml"/>
+  <link href="/atom.xml" rel="alternate" title="Ruby" type="application/atom+xml"/>
   
 
   
@@ -83,9 +83,9 @@
   <header><hgroup>
   <div id="langs">
     
-      <a href="/en//fr/about/index.html">en</a>
+      <a href="/en/about/index.html">en</a>
     
-      <a href="/fr//fr/about/index.html">fr</a>
+      <a href="/fr/about/index.html">fr</a>
     
   </div>
   <a href="/fr"></a>
@@ -94,7 +94,12 @@
 </header>
   <div id="main">
     <div id="content">
-      <p>Indéniablement, Ruby devient de plus en plus populaire. Les « rubyistes
+      <div>
+<article>
+  <header>
+    <h1 class="entry-title">À propos de Ruby</h1>
+  </header>
+  <p>Indéniablement, Ruby devient de plus en plus populaire. Les « rubyistes
 » qualifient ce langage d’élégant, voire lui prêtent des qualités
 artistiques ; ils soulignent dans le même temps qu’il est pratique à
 utiliser et facile d’accès. Mais tout ça est très éthéré, qu’en est-il
@@ -104,7 +109,7 @@ concrètement parlant ?</p>
 
 <p>Le langage ruby, en terme de syntaxe et de fonctionnalité, a été dès le
 départ conçu comme un ensemble homogène. Son créateur est le programmeur
-japonais [Yukihiro « matz » Matsumoto][matz]. Ce dernier a rassemblé certaines fonctionnalités de ses
+japonais <a href="http://www.rubyist.net/~matz/">Yukihiro « matz » Matsumoto</a>. Ce dernier a rassemblé certaines fonctionnalités de ses
 langages préférés de l’époque (principalement Perl, Smalltalk, Eiffel,
 Ada et Lisp) afin d’imaginer un nouveau langage qui mêlerait
 astucieusement programmations impérative et fonctionnelle. À plusieurs
@@ -113,9 +118,8 @@ plus naturel possible, pas nécessairement simple. »</p>
 
 <p>À ce propos, il a ajouté :</p>
 
-<p>{% blockquote liste de diffusion Ruby-Talk http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/2773 12 mai 2000 %}
-Ruby est simple en apparence, mais son architecture interne est très complexe — tout comme notre corps peut l’être.
-{% endblockquote %}</p>
+<blockquote><p>Ruby est simple en apparence, mais son architecture interne est très complexe — tout comme notre corps peut l’être.</p><footer><strong>liste de diffusion Ruby-Talk</strong><cite><a href='http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/2773'>12 Mai 2000</a></cite></footer></blockquote>
+
 
 <p>C’est cette approche qui a été maintenue depuis lors, pour faire de Ruby
 un langage robuste, porté par une syntaxe naturelle.</p>
@@ -129,7 +133,7 @@ reconnaissance. Aujourd’hui, des groupes d’utilisateurs existent dans
 les plus grandes villes du monde, et les (nombreuses) conférences à
 propos de Ruby affichent complet.</p>
 
-<p>Ruby-Talk, la toute première [liste de diffusion][listes de diffusion] recevant les
+<p>Ruby-Talk, la toute première <a href="/fr/community/mailing-lists/">liste de diffusion</a> recevant les
 discussions à propos du langage Ruby, atteint aujourd’hui une moyenne de
 deux cent nouveaux messages par jour.</p>
 
@@ -139,9 +143,9 @@ utilisés au monde. Concernant cette évolution, leur prédiction est la
 suivante : « il y a des chances que Ruby entre dans le top 10 dans moins
 de six mois. » La plus grande part de cette accélération semble revenir
 à la popularité de certains logiciels écrits en Ruby, notamment le
-framework web [Ruby on Rails][RoR].</p>
+framework web <a href="http://www.rubyonrails.org">Ruby on Rails</a>.</p>
 
-<p>Par ailleurs, Ruby est [totalement libre][license]. Il est non seulement
+<p>Par ailleurs, Ruby est <a href="/license.txt">totalement libre</a>. Il est non seulement
 gratuit, mais son utilisation, sa copie, sa modification et sa
 distribution sont également libres.</p>
 
@@ -150,7 +154,7 @@ distribution sont également libres.</p>
 <p>Initialement, Matz a étudié les autres langages afin de définir une
 syntaxe qui lui serait idéale. Se remémorant cet épisode, il nous
 rapportait : « je voulais un langage de script plus puissant que Perl,
-et plus orienté objet que Python([1][])".</p>
+et plus orienté objet que Python(<a href="http://www.linuxdevcenter.com/pub/a/linux/2001/11/29/ruby.html">1</a>)&#8221;.</p>
 
 <p>Dans Ruby, le paradigme de base est que tout y est un objet. Chaque
 entité d’information et de code peut recevoir ses propres propriétés et
@@ -159,12 +163,9 @@ sous le terme de <em>variables d’instance</em>, et aux actions sous le nom de
 <em>méthodes</em>. L’approche purement objet de Ruby est très souvent illustrée
 par un bout de code montrant l’application d’une action à un nombre.</p>
 
-<p>``` ruby</p>
-
-<pre><code>5.times { print "Nous **adorons** Ruby — un peu trop peut-être !" }
-</code></pre>
-
-<p>```</p>
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="mi">5</span><span class="o">.</span><span class="n">times</span> <span class="p">{</span> <span class="nb">print</span> <span class="s2">&quot;Nous **adorons** Ruby — un peu trop peut-être !&quot;</span> <span class="p">}</span>
+</div></code></pre></td></tr></table></div>
 
 <p>Dans beaucoup de langages, les nombres et autres types primaires ne sont
 pas des objets. Ruby suit ici la voie de Smalltalk, en donnant accès aux
@@ -188,19 +189,23 @@ bâtir des applications.</p>
 l’opérateur plus (<code>+</code>). Mais si vous préférez utiliser une méthode
 <code>plus</code>, vous pouvez l’ajouter à la classe de base <code>Numeric</code> de Ruby :</p>
 
-<p>``` ruby</p>
-
-<pre><code>class Numeric
-  def plus (x)
-    self.+(x)
-  end
-end
-
-y = 5.plus 6
-# y vaut maintenant 11
-</code></pre>
-
-<p>```</p>
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+<span class='line'>6</span>
+<span class='line'>7</span>
+<span class='line'>8</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="k">class</span> <span class="nc">Numeric</span>
+</div><div class='line'>  <span class="k">def</span> <span class="nf">plus</span> <span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</div><div class='line'>    <span class="nb">self</span><span class="o">.</span><span class="n">+</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</div><div class='line'>  <span class="k">end</span>
+</div><div class='line'><span class="k">end</span>
+</div><div class='line'>
+</div><div class='line'><span class="n">y</span> <span class="o">=</span> <span class="mi">5</span><span class="o">.</span><span class="n">plus</span> <span class="mi">6</span>
+</div><div class='line'><span class="c1"># y vaut maintenant 11</span>
+</div></code></pre></td></tr></table></div>
 
 <p>Tous les opérateurs de Ruby sont des méthodes pensées pour être aussi
 pratique que faire se peut, syntaxiquement parlant. Vous pouvez
@@ -220,14 +225,13 @@ habitués à des langages impératifs comme PHP ou Visual Basic.</p>
 a dit à ce propos : « en créant les <em>closures</em> de Ruby, je souhaitais
 respecter la voie tracée par Lisp([4][]). »</p>
 
-<p>``` ruby</p>
-
-<pre><code>search_engines = %w[Google Yahoo MSN].map do |engine|
-  "http://www." + engine.downcase + ".com"
-end
-</code></pre>
-
-<p>```</p>
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="n">search_engines</span> <span class="o">=</span> <span class="sx">%w[Google Yahoo MSN]</span><span class="o">.</span><span class="n">map</span> <span class="k">do</span> <span class="o">|</span><span class="n">engine</span><span class="o">|</span>
+</div><div class='line'>  <span class="s2">&quot;http://www.&quot;</span> <span class="o">+</span> <span class="n">engine</span><span class="o">.</span><span class="n">downcase</span> <span class="o">+</span> <span class="s2">&quot;.com&quot;</span>
+</div><div class='line'><span class="k">end</span>
+</div></code></pre></td></tr></table></div>
 
 <p>Dans le code ci-dessus, le bloc est délimité par la structure
 <code>do ... end</code>. La méthode <code>map</code> applique le bloc à la liste de mots
@@ -248,14 +252,13 @@ exemple, toute classe implémentant une méthode <code>each</code> peut ensuite
 incorporer le module <code>Enumerable</code>, lequel fournit gratuitement plusieurs
 méthodes utilisant <code>each</code> pour faire des boucles.</p>
 
-<p>``` ruby</p>
-
-<pre><code>class MonTableau
-  include Enumerable
-end
-</code></pre>
-
-<p>```</p>
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="k">class</span> <span class="nc">MonTableau</span>
+</div><div class='line'>  <span class="kp">include</span> <span class="no">Enumerable</span>
+</div><div class='line'><span class="k">end</span>
+</div></code></pre></td></tr></table></div>
 
 <p>En général, les rubyistes préfèrent cette façon de faire à l’héritage
 multiple, qui est complexe et peut se révéler trop restrictif.</p>
@@ -303,6 +306,210 @@ si le système d’exploitation le permet ;</li>
 GNU/Linux, Ruby fonctionne aussi sur une grande part des UNIX, Mac
 OS X, Windows 95/98/Me/NT/2000/XP, DOS, BeOS, OS/2, etc.</li>
 </ul>
+
+
+  
+</article>
+
+</div>
+
+<aside role=sidebar>
+  
+    
+
+
+
+<section id="menus">
+  <div class="menu-title">
+    <span>Découvrez Ruby</span>
+    sans peine
+  </div>
+  <ul class="nav">
+  
+    
+    
+      
+    
+
+    
+    
+
+    <li class="first  ">
+      <a class="" href="http://tryruby.org">Essayez Ruby !</a>
+      
+    </li>
+  
+    
+    
+
+    
+    
+
+    <li class="  ">
+      <a class="" href="/fr/downloads">Téléchargez Ruby</a>
+      
+    </li>
+  
+    
+    
+
+    
+    
+
+    <li class="  ">
+      <a class="" href="/fr/documentation/quickstart">Ruby en 20mn</a>
+      
+    </li>
+  
+    
+    
+
+    
+    
+
+    <li class="  last">
+      <a class="" href="/fr/documentation/ruby-from-other-languages">Vous venez d&#8217;un autre langage ?</a>
+      
+    </li>
+  
+  </ul>
+</section>
+
+<section id="menus">
+  <div class="menu-title">
+    <span>Explorez</span>
+    un nouvel univers
+  </div>
+  <ul class="nav">
+  
+    
+    
+
+    
+    
+
+    <li class="first  ">
+      <a class="" href="/fr/documentation">Documentation</a>
+      
+    </li>
+  
+    
+    
+      
+    
+
+    
+    
+
+    <li class="  ">
+      <a class="" href="http://www.amazon.com/s/ref=sr_nr_n_5?ie=UTF8&rs=1000&keywords=Ruby&rh=i%3Aaps%2Ck%3ARuby%2Ci%3Astripbooks%2Cn%3A1000%2Cn%3A5">Livres</a>
+      
+    </li>
+  
+    
+    
+
+    
+    
+
+    <li class="  ">
+      <a class="" href="/fr/libraries">Bibliothèques</a>
+      
+    </li>
+  
+    
+    
+
+    
+    
+
+    <li class="  last">
+      <a class="" href="/fr/documentation/success-stories">Témoignages</a>
+      
+    </li>
+  
+  </ul>
+</section>
+
+<section id="menus">
+  <div class="menu-title">
+    <span>Participez</span>
+    à la vie de la communauté
+  </div>
+  <ul class="nav">
+  
+    
+    
+
+    
+    
+
+    <li class="first  ">
+      <a class="" href="/fr/community/mailing-lists">Listes de diffusion</a>
+      <span>discutez de Ruby avec des programmeurs du monde entier.</span>
+    </li>
+  
+    
+    
+
+    
+    
+
+    <li class="  ">
+      <a class="" href="/fr/community/user-groups">Groupes d&#8217;utilisateurs</a>
+      <span>entrez en contact avec d’autres rubyistes de votre région.</span>
+    </li>
+  
+    
+    
+
+    
+    
+
+    <li class="  ">
+      <a class="" href="/fr/community/weblogs">Blogs</a>
+      <span>suivez toute l’actualité de la communauté Ruby.</span>
+    </li>
+  
+    
+    
+
+    
+    
+
+    <li class="  ">
+      <a class="" href="/fr/community/ruby-core">Ruby Core</a>
+      <span>apportez votre aide à l&#8217;élaboration du prochain Ruby.</span>
+    </li>
+  
+    
+    
+      
+    
+
+    
+    
+
+    <li class="  last">
+      <a class="" href="http://redmine.ruby-lang.org">Bugs</a>
+      <span>aidez à corriger et/ou améliorer Ruby.</span>
+    </li>
+  
+  </ul>
+</section>
+
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+  </ul>
+</section>
+
+
+
+
+  
+</aside>
 
 
     </div>

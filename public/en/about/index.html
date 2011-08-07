@@ -17,13 +17,13 @@
   
 
   <link rel="canonical" href="http://www.ruby-lang.org/en/about/index.html"/>
-  <link href="//favicon.png" rel="shortcut icon" />
-  <link href="//stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="//javascripts/modernizr-2.0.js"></script>
+  <link href="/favicon.png" rel="shortcut icon" />
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="http://s3.amazonaws.com/ender-js/jeesh.min.js"></script>
-  <script src="//javascripts/octopress.js" type="text/javascript"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
   
-  <link href="//atom.xml" rel="alternate" title="Ruby" type="application/atom+xml"/>
+  <link href="/atom.xml" rel="alternate" title="Ruby" type="application/atom+xml"/>
   
 
   
@@ -83,9 +83,9 @@
   <header><hgroup>
   <div id="langs">
     
-      <a href="/en//en/about/index.html">en</a>
+      <a href="/en/about/index.html">en</a>
     
-      <a href="/fr//en/about/index.html">fr</a>
+      <a href="/fr/about/index.html">fr</a>
     
   </div>
   <a href="/en"></a>
@@ -94,18 +94,22 @@
 </header>
   <div id="main">
     <div id="content">
-      <p>Wondering why Ruby is so popular? Its fans call it a beautiful, artful
+      <div>
+<article>
+  <header>
+    <h1 class="entry-title">About</h1>
+  </header>
+  <p>Wondering why Ruby is so popular? Its fans call it a beautiful, artful
 language. And yet, they say it’s handy and practical. What gives?</p>
 
 <h3>The Ideals of Ruby’s Creator</h3>
 
-<p>Ruby is a language of careful balance. Its creator, [Yukihiro "matz" Matsumoto][matz], blended parts of his favorite languages (Perl, Smalltalk, Eiffel, Ada, and Lisp) to form a new language that balanced functional programming with imperative programming. He has often said that he is trying to make Ruby natural, not simple, in a way that mirrors life.</p>
+<p>Ruby is a language of careful balance. Its creator, <a href="http://www.rubyist.net/~matz/">Yukihiro &#8220;matz&#8221; Matsumoto</a>, blended parts of his favorite languages (Perl, Smalltalk, Eiffel, Ada, and Lisp) to form a new language that balanced functional programming with imperative programming. He has often said that he is trying to make Ruby natural, not simple, in a way that mirrors life.</p>
 
 <p>Building on this, he adds:</p>
 
-<p>{% blockquote on the Ruby-Talk mailing list http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/2773 May 12th, 2000 %}
-Ruby is simple in appearance, but is very complex inside, just like our human body.
-{% endblockquote %}</p>
+<blockquote><p>Ruby is simple in appearance, but is very complex inside, just like our human body.</p><footer><strong>on the Ruby-Talk mailing list</strong><cite><a href='http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/2773'>May 12th, 2000</a></cite></footer></blockquote>
+
 
 <h3>About Ruby’s Growth</h3>
 
@@ -114,7 +118,7 @@ worldwide. In 2006, Ruby achieved mass acceptance. With active user
 groups formed in the world’s major cities and Ruby-related conferences
 filled to capacity.</p>
 
-<p>Ruby-Talk, the primary [mailing list][mailing lists] for discussion of the Ruby
+<p>Ruby-Talk, the primary <a href="/en/community/mailing-lists/">mailing list</a> for discussion of the Ruby
 language, climbed to an average of 200 messages per day in 2006. It has
 dropped in recent years as the size of the community pushed discussion
 from one central list into many smaller groups.</p>
@@ -122,16 +126,16 @@ from one central list into many smaller groups.</p>
 <p>The TIOBE index, which measures the growth of programming languages,
 ranks Ruby as #9 among programming languages worldwide. Much of the
 growth is attributed to the popularity of software written in Ruby,
-particularly the [Ruby on Rails][RoR] web framework.</p>
+particularly the <a href="http://www.rubyonrails.org">Ruby on Rails</a> web framework.</p>
 
-<p>Ruby is also [totally free][license]. Not only free of charge, but also free to
+<p>Ruby is also <a href="/license.txt">totally free</a>. Not only free of charge, but also free to
 use, copy, modify, and distribute.</p>
 
 <h3>Seeing Everything as an Object</h3>
 
 <p>Initially, Matz looked at other languages to find an ideal syntax.
-Recalling his search, he said, "I wanted a scripting language that was
-more powerful than Perl, and more object-oriented than Python"([1][1]).</p>
+Recalling his search, he said, &#8220;I wanted a scripting language that was
+more powerful than Perl, and more object-oriented than Python&#8221;(<a href="http://www.linuxdevcenter.com/pub/a/linux/2001/11/29/ruby.html">1</a>).</p>
 
 <p>In Ruby, everything is an object. Every bit of information and code can
 be given their own properties and actions. Object-oriented programming
@@ -139,12 +143,9 @@ calls properties by the name <em>instance variables</em> and actions are known
 as <em>methods</em>. Ruby’s pure object-oriented approach is most commonly
 demonstrated by a bit of code which applies an action to a number.</p>
 
-<p>``` ruby</p>
-
-<pre><code>5.times { print "We **love** Ruby - it's outrageous!" }
-</code></pre>
-
-<p>```</p>
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="mi">5</span><span class="o">.</span><span class="n">times</span> <span class="p">{</span> <span class="nb">print</span> <span class="s2">&quot;We **love** Ruby - it&#39;s outrageous!&quot;</span> <span class="p">}</span>
+</div></code></pre></td></tr></table></div>
 
 <p>In many languages, numbers and other primitive types are not objects.
 Ruby follows the influence of the Smalltalk language by giving methods
@@ -162,19 +163,23 @@ coder.</p>
 you’d rather use the readable word <code>plus</code>, you could add such a method
 to Ruby’s builtin <code>Numeric</code> class.</p>
 
-<p>``` ruby</p>
-
-<pre><code>class Numeric
-  def plus (x)
-    self.+(x)
-  end
-end
-
-y = 5.plus 6
-# y is now equal to 11
-</code></pre>
-
-<p>```</p>
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+<span class='line'>6</span>
+<span class='line'>7</span>
+<span class='line'>8</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="k">class</span> <span class="nc">Numeric</span>
+</div><div class='line'>  <span class="k">def</span> <span class="nf">plus</span> <span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</div><div class='line'>    <span class="nb">self</span><span class="o">.</span><span class="n">+</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</div><div class='line'>  <span class="k">end</span>
+</div><div class='line'><span class="k">end</span>
+</div><div class='line'>
+</div><div class='line'><span class="n">y</span> <span class="o">=</span> <span class="mi">5</span><span class="o">.</span><span class="n">plus</span> <span class="mi">6</span>
+</div><div class='line'><span class="c1"># y is now equal to 11</span>
+</div></code></pre></td></tr></table></div>
 
 <p>Ruby’s operators are syntactic sugar for methods. You can redefine them
 as well.</p>
@@ -187,17 +192,16 @@ method should act. The closure is called a <em>block</em> and has become one of
 the most popular features for newcomers to Ruby from other imperative
 languages like PHP or Visual Basic.</p>
 
-<p>Blocks are inspired by functional languages. Matz said, "in Ruby
-closures, I wanted to respect the Lisp culture"([2][2]).</p>
+<p>Blocks are inspired by functional languages. Matz said, &#8220;in Ruby
+closures, I wanted to respect the Lisp culture&#8221;(<a href="http://www.artima.com/intv/closures2.html">2</a>).</p>
 
-<p>``` ruby</p>
-
-<pre><code>search_engines = %w[Google Yahoo MSN].map do |engine|
-  "http://www." + engine.downcase + ".com"
-end
-</code></pre>
-
-<p>```</p>
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="n">search_engines</span> <span class="o">=</span> <span class="sx">%w[Google Yahoo MSN]</span><span class="o">.</span><span class="n">map</span> <span class="k">do</span> <span class="o">|</span><span class="n">engine</span><span class="o">|</span>
+</div><div class='line'>  <span class="s2">&quot;http://www.&quot;</span> <span class="o">+</span> <span class="n">engine</span><span class="o">.</span><span class="n">downcase</span> <span class="o">+</span> <span class="s2">&quot;.com&quot;</span>
+</div><div class='line'><span class="k">end</span>
+</div></code></pre></td></tr></table></div>
 
 <p>In the above code, the block is described inside the <code>do ... end</code>
 construct. The <code>map</code> method applies the block to the provided list of
@@ -215,14 +219,13 @@ example, any class which implements the <code>each</code> method can mixin the
 <code>Enumerable</code> module, which adds a pile of methods that use <code>each</code> for
 looping.</p>
 
-<p>``` ruby</p>
-
-<pre><code>class MyArray
-  include Enumerable
-end
-</code></pre>
-
-<p>```</p>
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="k">class</span> <span class="nc">MyArray</span>
+</div><div class='line'>  <span class="kp">include</span> <span class="no">Enumerable</span>
+</div><div class='line'><span class="k">end</span>
+</div></code></pre></td></tr></table></div>
 
 <p>Generally, Rubyists see this as a much clearer way than multiple
 inheritance, which is complex and can be too restrictive.</p>
@@ -263,6 +266,210 @@ or not, even on MS-DOS!</li>
 works on many types of UNIX, Mac OS X, Windows 95/98/Me/NT/2000/XP, DOS, BeOS, OS/2,
 etc.</li>
 </ul>
+
+
+  
+</article>
+
+</div>
+
+<aside role=sidebar>
+  
+    
+
+
+
+<section id="menus">
+  <div class="menu-title">
+    <span>Get started</span>
+    the easy way
+  </div>
+  <ul class="nav">
+  
+    
+    
+      
+    
+
+    
+    
+
+    <li class="first  ">
+      <a class="" href="http://tryruby.org">Try Ruby! (in your browser)</a>
+      
+    </li>
+  
+    
+    
+
+    
+    
+
+    <li class="  ">
+      <a class="" href="/en/downloads">Download Ruby</a>
+      
+    </li>
+  
+    
+    
+
+    
+    
+
+    <li class="  ">
+      <a class="" href="/en/documentation/quickstart">Ruby in 20mn</a>
+      
+    </li>
+  
+    
+    
+
+    
+    
+
+    <li class="  last">
+      <a class="" href="/en/documentation/ruby-from-other-languages">Ruby from other languages</a>
+      
+    </li>
+  
+  </ul>
+</section>
+
+<section id="menus">
+  <div class="menu-title">
+    <span>Explore</span>
+    a new world…
+  </div>
+  <ul class="nav">
+  
+    
+    
+
+    
+    
+
+    <li class="first  ">
+      <a class="" href="/en/documentation">Documentation</a>
+      
+    </li>
+  
+    
+    
+      
+    
+
+    
+    
+
+    <li class="  ">
+      <a class="" href="http://www.amazon.com/s/ref=sr_nr_n_5?ie=UTF8&rs=1000&keywords=Ruby&rh=i%3Aaps%2Ck%3ARuby%2Ci%3Astripbooks%2Cn%3A1000%2Cn%3A5">Books</a>
+      
+    </li>
+  
+    
+    
+
+    
+    
+
+    <li class="  ">
+      <a class="" href="/en/Libraries">Libraries</a>
+      
+    </li>
+  
+    
+    
+
+    
+    
+
+    <li class="  last">
+      <a class="" href="/en/documentation/success-stories">Success Stories</a>
+      
+    </li>
+  
+  </ul>
+</section>
+
+<section id="menus">
+  <div class="menu-title">
+    <span>Participate</span>
+    in a friendly and growing community
+  </div>
+  <ul class="nav">
+  
+    
+    
+
+    
+    
+
+    <li class="first  ">
+      <a class="" href="/en/community/mailing-lists">Mailing lists</a>
+      <span>Talk about Ruby with programmers from all around the world.</span>
+    </li>
+  
+    
+    
+
+    
+    
+
+    <li class="  ">
+      <a class="" href="/en/community/user-groups">User groups</a>
+      <span>Get in contact with Rubyists in your area.</span>
+    </li>
+  
+    
+    
+
+    
+    
+
+    <li class="  ">
+      <a class="" href="/en/community/weblogs">Blogs</a>
+      <span>Read about what’s happening right now in the Ruby community.</span>
+    </li>
+  
+    
+    
+
+    
+    
+
+    <li class="  ">
+      <a class="" href="/en/community/ruby-core">Ruby Core</a>
+      <span>Help polish the rough edges of the latest Ruby.</span>
+    </li>
+  
+    
+    
+      
+    
+
+    
+    
+
+    <li class="  last">
+      <a class="" href="http://redmine.ruby-lang.org">Issue tracker</a>
+      <span>Report or help solve issues in Ruby.</span>
+    </li>
+  
+  </ul>
+</section>
+
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+  </ul>
+</section>
+
+
+
+
+  
+</aside>
 
 
     </div>
