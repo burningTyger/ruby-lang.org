@@ -1,8 +1,7 @@
 #!/bin/sh
 
 # assuming a git checkout -b publish was performed from master, with some config edits commited on publish
-git branch -d publish
-git checkout -b publish
+git checkout publish
 git checkout -- public
 git rebase master
 jekyll
