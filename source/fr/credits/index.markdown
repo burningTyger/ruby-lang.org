@@ -12,5 +12,5 @@ ruby-lang.org est maintenu par des membres de la communauté Ruby. Le code sourc
 * [Octopress][octopress] pour ses plugins et son thème Classic
 * [Thor][thor] pour l'outil shell de maintenance
 * [Compass][compass] pour le développement Sass
-* [Pygments][pygments]] et [pygments.rb][pygments.rb] pour la coloration syntaxique
+* [Pygments][pygments] et [pygments.rb][pygments.rb] pour la coloration syntaxique
 * et quelques autres encore !
