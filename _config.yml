@@ -150,7 +150,6 @@ email:
 #    Jekyll & Plugins     #
 # ----------------------- #
 
-safe: true
 root: /
 port: 4000
 permalink: /blog/:year/:month/:day/:title/
