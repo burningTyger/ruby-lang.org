@@ -10,9 +10,9 @@
 # asides: [asides/twitter.html, asides/custom/my_picture.html]
 #
 module Jekyll
-
   class IncludeArrayTag < Liquid::Tag
     Syntax = /(#{Liquid::QuotedFragment}+)/
+
     def initialize(tag_name, markup, tokens)
       if markup =~ Syntax
         @array_name = $1
