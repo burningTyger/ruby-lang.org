@@ -9,7 +9,7 @@
   </div>
   <ul class="nav">
   {% for link in menu.links %}
-    {% capture url %}/{{ locale }}/{{ link.url }}{% endcapture %}
+  {% capture url %}{{ site.root }}{{ locale }}/{{ link.url }}{% endcapture %}
     {% if link.url contains 'http://' or link.url contains 'https://' %}
       {% assign url = link.url %}
     {% endif %}
