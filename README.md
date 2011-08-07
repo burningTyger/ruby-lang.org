@@ -62,3 +62,14 @@ What's missing so far:
 * Deploy tasks
 * Asking Matz
 * Production-ready checks (links, urls, content missing…) and deployment
+
+## Creating pages and news items
+
+There are command line tasks for creating new pages and news items. Using those tasks prevents you from messing with the metadata, and ensure a few checks.
+
+``` bash
+    thor new:page 'en/my/page' 'optionnal title'
+    thor new:post 'Breaking news !'
+```
+
+Type in `thor list` to see all available tasks. We may turn this into a `rubylang` script.
