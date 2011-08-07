@@ -17,13 +17,13 @@
   
 
   <link rel="canonical" href="http://www.ruby-lang.org/en/documentation/quickstart/2/index.html"/>
-  <link href="//favicon.png" rel="shortcut icon" />
-  <link href="//stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="//javascripts/modernizr-2.0.js"></script>
+  <link href="/favicon.png" rel="shortcut icon" />
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
   <script src="http://s3.amazonaws.com/ender-js/jeesh.min.js"></script>
-  <script src="//javascripts/octopress.js" type="text/javascript"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
   
-  <link href="//atom.xml" rel="alternate" title="Ruby" type="application/atom+xml"/>
+  <link href="/atom.xml" rel="alternate" title="Ruby" type="application/atom+xml"/>
   
 
   
@@ -83,9 +83,9 @@
   <header><hgroup>
   <div id="langs">
     
-      <a href="/en//en/documentation/quickstart/2/index.html">en</a>
+      <a href="/en/documentation/quickstart/2/index.html">en</a>
     
-      <a href="/fr//en/documentation/quickstart/2/index.html">fr</a>
+      <a href="/fr/documentation/quickstart/2/index.html">fr</a>
     
   </div>
   <a href="/en"></a>
@@ -94,17 +94,22 @@
 </header>
   <div id="main">
     <div id="content">
-      <p>What if we want to say “Hello” a lot without getting our fingers all tired? We need to define a method!</p>
+      <div>
+<article>
+  <header>
+    <h1 class="entry-title">Ruby in twenty minutes (2/4)</h1>
+  </header>
+  <p>What if we want to say “Hello” a lot without getting our fingers all tired? We need to define a method!</p>
 
-<p>``` ruby</p>
-
-<pre><code>irb (main):010:0&gt; def h
-irb (main):011:1&gt;   puts "Hello World!"
-irb (main):012:1&gt; end
-=&gt; nil
-</code></pre>
-
-<p>```</p>
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">010</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="k">def</span> <span class="nf">h</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">011</span><span class="p">:</span><span class="mi">1</span><span class="o">&gt;</span>   <span class="nb">puts</span> <span class="s2">&quot;Hello World!&quot;</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">012</span><span class="p">:</span><span class="mi">1</span><span class="o">&gt;</span> <span class="k">end</span>
+</div><div class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
+</div></code></pre></td></tr></table></div>
 
 <p>The code <code>def h</code> starts the definition of the method. It tells Ruby that
 we’re defining a method, that its name is <code>h</code>. The next line is the body of
@@ -114,35 +119,40 @@ the method, the same line we saw earlier: <code>puts "Hello World"</code>. Final
 
 <p>Now let’s try running that method a few times:</p>
 
-<p>``` ruby</p>
-
-<pre><code>irb (main):013:0&gt; h
-Hello World!
-=&gt; nil
-irb (main):014:0&gt; h()
-Hello World!
-=&gt; nil
-</code></pre>
-
-<p>```</p>
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+<span class='line'>6</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">013</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="n">h</span>
+</div><div class='line'><span class="no">Hello</span> <span class="no">World</span><span class="o">!</span>
+</div><div class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">014</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="n">h</span><span class="p">()</span>
+</div><div class='line'><span class="no">Hello</span> <span class="no">World</span><span class="o">!</span>
+</div><div class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
+</div></code></pre></td></tr></table></div>
 
 <p>Well, that was easy. Calling a method in Ruby is as easy as just mentioning its name to Ruby. If the method doesn’t take parameters
 that’s all you need. You can add empty parentheses if you’d like, but they’re not needed.</p>
 
 <p>What if we want to say hello to one person, and not the whole world? Just redefine <code>h</code> to take a name as a parameter.</p>
 
-<p>``` ruby</p>
-
-<pre><code>irb (main):015:0&gt; def h (name)
-irb (main):016:1&gt;   puts "Hello #{name}!"
-irb (main):017:1&gt; end
-=&gt; nil
-irb (main):018:0&gt; h ("Matz")
-Hello Matz!
-=&gt; nil
-</code></pre>
-
-<p>```</p>
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+<span class='line'>6</span>
+<span class='line'>7</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">015</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="k">def</span> <span class="nf">h</span> <span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">016</span><span class="p">:</span><span class="mi">1</span><span class="o">&gt;</span>   <span class="nb">puts</span> <span class="s2">&quot;Hello </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">!&quot;</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">017</span><span class="p">:</span><span class="mi">1</span><span class="o">&gt;</span> <span class="k">end</span>
+</div><div class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">01</span><span class="mi">8</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="n">h</span> <span class="p">(</span><span class="s2">&quot;Matz&quot;</span><span class="p">)</span>
+</div><div class='line'><span class="no">Hello</span> <span class="no">Matz</span><span class="o">!</span>
+</div><div class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
+</div></code></pre></td></tr></table></div>
 
 <p>So it works… but let’s take a second to see what’s going on here.</p>
 
@@ -150,21 +160,27 @@ Hello Matz!
 
 <p>What’s the <code>#{name}</code> bit? That’s Ruby’s way of inserting something into a string. The bit between the braces is turned into a string (if it isn’t one already) and then substituted into the outer string at that point. You can also use this to make sure that someone’s name is properly capitalized:</p>
 
-<p>``` ruby</p>
-
-<pre><code>irb (main):019:0&gt; def h(name = "World")
-irb (main):020:1&gt;    puts "Hello #{name.capitalize}!"
-irb (main):021:1&gt; end
-=&gt; nil
-irb (main):022:0&gt; h "chris"
-Hello Chris!
-=&gt; nil
-irb (main):023:0&gt; h
-Hello World!
-=&gt; nil
-</code></pre>
-
-<p>```</p>
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+<span class='line'>6</span>
+<span class='line'>7</span>
+<span class='line'>8</span>
+<span class='line'>9</span>
+<span class='line'>10</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">01</span><span class="mi">9</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="k">def</span> <span class="nf">h</span><span class="p">(</span><span class="nb">name</span> <span class="o">=</span> <span class="s2">&quot;World&quot;</span><span class="p">)</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">020</span><span class="p">:</span><span class="mi">1</span><span class="o">&gt;</span>    <span class="nb">puts</span> <span class="s2">&quot;Hello </span><span class="si">#{</span><span class="nb">name</span><span class="o">.</span><span class="n">capitalize</span><span class="si">}</span><span class="s2">!&quot;</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">021</span><span class="p">:</span><span class="mi">1</span><span class="o">&gt;</span> <span class="k">end</span>
+</div><div class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">022</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="n">h</span> <span class="s2">&quot;chris&quot;</span>
+</div><div class='line'><span class="no">Hello</span> <span class="no">Chris</span><span class="o">!</span>
+</div><div class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">023</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="n">h</span>
+</div><div class='line'><span class="no">Hello</span> <span class="no">World</span><span class="o">!</span>
+</div><div class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
+</div></code></pre></td></tr></table></div>
 
 <p>A couple of other tricks to spot here. One is that we’re calling the method without parentheses again. If it’s obvious what you’re doing, the parentheses are optional. The other trick is the default parameter <code>World</code>. What this is saying is “If the name isn’t supplied, use the default name of <code>"World"</code>”.</p>
 
@@ -173,27 +189,239 @@ Hello World!
 <p>What if we want a real greeter around, one that remembers your name and welcomes you and treats you always with respect. You might want to use
 an object for that. Let’s create a “Greeter” class.</p>
 
-<p>``` ruby</p>
-
-<pre><code>irb (main):024:0&gt; class Greeter
-irb (main):025:1&gt;   def initialize (name = "World")
-irb (main):026:2&gt;     @name = name
-irb (main):027:2&gt;   end
-irb (main):028:1&gt;   def say_hi
-irb (main):029:2&gt;     puts "Hi #{@name}!"
-irb (main):030:2&gt;   end
-irb (main):031:1&gt;   def say_bye
-irb (main):032:2&gt;     puts "Bye #{@name}, come back soon."
-irb (main):033:2&gt;   end
-irb (main):034:1&gt; end
-=&gt; nil
-</code></pre>
-
-<p>```</p>
+<div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+<span class='line'>6</span>
+<span class='line'>7</span>
+<span class='line'>8</span>
+<span class='line'>9</span>
+<span class='line'>10</span>
+<span class='line'>11</span>
+<span class='line'>12</span>
+</pre></td><td class='code' width='100%'><pre><code class='ruby'><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">024</span><span class="p">:</span><span class="mi">0</span><span class="o">&gt;</span> <span class="k">class</span> <span class="nc">Greeter</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">025</span><span class="p">:</span><span class="mi">1</span><span class="o">&gt;</span>   <span class="k">def</span> <span class="nf">initialize</span> <span class="p">(</span><span class="nb">name</span> <span class="o">=</span> <span class="s2">&quot;World&quot;</span><span class="p">)</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">026</span><span class="p">:</span><span class="mi">2</span><span class="o">&gt;</span>     <span class="vi">@name</span> <span class="o">=</span> <span class="nb">name</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">027</span><span class="p">:</span><span class="mi">2</span><span class="o">&gt;</span>   <span class="k">end</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">02</span><span class="mi">8</span><span class="p">:</span><span class="mi">1</span><span class="o">&gt;</span>   <span class="k">def</span> <span class="nf">say_hi</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">02</span><span class="mi">9</span><span class="p">:</span><span class="mi">2</span><span class="o">&gt;</span>     <span class="nb">puts</span> <span class="s2">&quot;Hi </span><span class="si">#{</span><span class="vi">@name</span><span class="si">}</span><span class="s2">!&quot;</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">030</span><span class="p">:</span><span class="mi">2</span><span class="o">&gt;</span>   <span class="k">end</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">031</span><span class="p">:</span><span class="mi">1</span><span class="o">&gt;</span>   <span class="k">def</span> <span class="nf">say_bye</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">032</span><span class="p">:</span><span class="mi">2</span><span class="o">&gt;</span>     <span class="nb">puts</span> <span class="s2">&quot;Bye </span><span class="si">#{</span><span class="vi">@name</span><span class="si">}</span><span class="s2">, come back soon.&quot;</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">033</span><span class="p">:</span><span class="mi">2</span><span class="o">&gt;</span>   <span class="k">end</span>
+</div><div class='line'><span class="n">irb</span> <span class="p">(</span><span class="n">main</span><span class="p">):</span><span class="mo">034</span><span class="p">:</span><span class="mi">1</span><span class="o">&gt;</span> <span class="k">end</span>
+</div><div class='line'><span class="o">=&gt;</span> <span class="kp">nil</span>
+</div></code></pre></td></tr></table></div>
 
 <p>The  new keyword here is <code>class</code>. This defines a new class called <code>Greeter</code> and a bunch of methods for that class. Also notice <code>`name</code>. This is an instance variable, and is available to all the methods of the class. As you can see it’s used by <code>say_hi</code> and <code>say_bye</code>.</p>
 
 <p>So how do we get this Greeter class set in motion? <a href="../3">create an object</a>.</p>
+
+  
+</article>
+
+</div>
+
+<aside role=sidebar>
+  
+    
+
+
+
+<section id="menus">
+  <div class="menu-title">
+    <span>Get started</span>
+    the easy way
+  </div>
+  <ul class="nav">
+  
+    
+    
+      
+    
+
+    
+    
+
+    <li class="first  ">
+      <a class="" href="http://tryruby.org">Try Ruby! (in your browser)</a>
+      
+    </li>
+  
+    
+    
+
+    
+    
+
+    <li class="  ">
+      <a class="" href="/en/downloads">Download Ruby</a>
+      
+    </li>
+  
+    
+    
+
+    
+    
+
+    <li class="  ">
+      <a class="" href="/en/documentation/quickstart">Ruby in 20mn</a>
+      
+    </li>
+  
+    
+    
+
+    
+    
+
+    <li class="  last">
+      <a class="" href="/en/documentation/ruby-from-other-languages">Ruby from other languages</a>
+      
+    </li>
+  
+  </ul>
+</section>
+
+<section id="menus">
+  <div class="menu-title">
+    <span>Explore</span>
+    a new world…
+  </div>
+  <ul class="nav">
+  
+    
+    
+
+    
+    
+
+    <li class="first  ">
+      <a class="" href="/en/documentation">Documentation</a>
+      
+    </li>
+  
+    
+    
+      
+    
+
+    
+    
+
+    <li class="  ">
+      <a class="" href="http://www.amazon.com/s/ref=sr_nr_n_5?ie=UTF8&rs=1000&keywords=Ruby&rh=i%3Aaps%2Ck%3ARuby%2Ci%3Astripbooks%2Cn%3A1000%2Cn%3A5">Books</a>
+      
+    </li>
+  
+    
+    
+
+    
+    
+
+    <li class="  ">
+      <a class="" href="/en/Libraries">Libraries</a>
+      
+    </li>
+  
+    
+    
+
+    
+    
+
+    <li class="  last">
+      <a class="" href="/en/documentation/success-stories">Success Stories</a>
+      
+    </li>
+  
+  </ul>
+</section>
+
+<section id="menus">
+  <div class="menu-title">
+    <span>Participate</span>
+    in a friendly and growing community
+  </div>
+  <ul class="nav">
+  
+    
+    
+
+    
+    
+
+    <li class="first  ">
+      <a class="" href="/en/community/mailing-lists">Mailing lists</a>
+      <span>Talk about Ruby with programmers from all around the world.</span>
+    </li>
+  
+    
+    
+
+    
+    
+
+    <li class="  ">
+      <a class="" href="/en/community/user-groups">User groups</a>
+      <span>Get in contact with Rubyists in your area.</span>
+    </li>
+  
+    
+    
+
+    
+    
+
+    <li class="  ">
+      <a class="" href="/en/community/weblogs">Blogs</a>
+      <span>Read about what’s happening right now in the Ruby community.</span>
+    </li>
+  
+    
+    
+
+    
+    
+
+    <li class="  ">
+      <a class="" href="/en/community/ruby-core">Ruby Core</a>
+      <span>Help polish the rough edges of the latest Ruby.</span>
+    </li>
+  
+    
+    
+      
+    
+
+    
+    
+
+    <li class="  last">
+      <a class="" href="http://redmine.ruby-lang.org">Issue tracker</a>
+      <span>Report or help solve issues in Ruby.</span>
+    </li>
+  
+  </ul>
+</section>
+
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+  </ul>
+</section>
+
+
+
+
+  
+</aside>
+
 
     </div>
   </div>
